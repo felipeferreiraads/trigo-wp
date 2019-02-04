@@ -1,0 +1,66 @@
+.newsletters
+    position relative
+    top -200px
+    h2
+        font-size: 30px
+        color: white
+        text-align: center
+        margin-bottom: 80px
+    .grid
+        display flex
+        > *:not(:last-child)
+            margin-right: 70px
+
+.card-newsletter
+    height: 400px
+    background: white
+    border-radius: 5px
+    box-shadow: 0 2px 10px 0 rgba(162, 162, 162, 0.5)
+    position relative
+    overflow hidden
+    &.internal
+        height 350px
+    .content
+        height 100%
+        padding: 30px 0 50px
+        display: flex
+        flex-direction: column
+        align-items: center
+    img
+        width: 100px
+    h3
+        font-size: 25px
+        color: $color.primary
+        text-align: center
+        margin: 20px 0
+        &.title-news
+            margin-top: 0
+            font-size: 20px
+    p
+        text-align: center
+    a
+        width: 100%
+        height 50px
+        display block
+        position absolute
+        bottom: 0
+        left 0
+        background: $color.primary
+        line-height: 50px
+        color white
+        font-weight: bold
+        text-align: center
+        text-transform: uppercase
+    ul
+        list-style-type: none
+        padding: 0
+        li
+            text-align: center
+            &:not(:last-child)
+                margin-bottom: 15px
+    .price
+        font-size: 20px
+        text-align: center
+        font-weight: 600
+        color: $color.primary
+        margin: auto 0 20px

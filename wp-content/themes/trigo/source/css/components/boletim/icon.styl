@@ -1,0 +1,30 @@
+.content
+    padding: 100px 0
+    .sample
+        max-width 500px
+        margin: 70px auto 0
+    h2
+        font-size: 35px
+        color: $color.primary
+        margin-bottom: 30px
+
+.icon-newsletter
+    height: 140px
+    display: flex
+    justify-content: center
+    position relative
+    margin-bottom: 100px
+    img
+        height: 100%
+    &::before, &::after
+        content: ''
+        width: calc(50% - 120px)
+        height: 2px
+        background: $color.gray-light
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+    &::after
+        left: auto
+        right: 0

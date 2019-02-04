@@ -1,0 +1,67 @@
+.newsletter-plans
+    margin-bottom: 100px
+    h2
+        text-align: center
+        font-size: 35px
+        color: $color.primary
+        margin-bottom: 70px
+    .grid
+        display flex
+        justify-content: center
+        > *
+            width: 320px
+            max-width 100%
+            &:not(:last-child)
+                margin-right: 50px
+    .grid-switch
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 70px
+        > *:not(:last-child)
+            margin-right: 15px
+            &:first-child
+                margin-left: 145px
+        span 
+            text-transform: uppercase
+            font-weight: 600
+            font-size: 14px
+            letter-spacing: 1px
+            i
+                color: #818285
+                font-style: normal
+
+.switch 
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 34px
+    input  
+        opacity: 0
+        width: 0
+        height: 0
+        &:checked + .slider:before
+            transform: translateX(26px)
+
+.slider 
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #bebebc
+    transition: .4s
+    &::before 
+        position: absolute
+        content: ""
+        height: 26px
+        width: 26px
+        left: 4px
+        bottom: 4px
+        background-color: $color.primary
+        transition: .4s
+    &.round 
+        border-radius: 34px
+        &::before 
+            border-radius: 50%

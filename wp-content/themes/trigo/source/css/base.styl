@@ -1,0 +1,45 @@
+// =============================================================================
+// Base
+// =============================================================================
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+body
+  font-family: $font-family.primary
+  overflow-x hidden
+  padding-top: 100px
+  background-image: linear-gradient(to bottom, #ffffff, #f9f9f9)
+
+a
+  text-decoration: none
+  color: inherit
+
+p
+  line-height: 1.5
+  color: $color.text
+
+.container
+  max-width: $container.width
+  padding: 0 $container.padding
+  margin-left: auto
+  margin-right: auto
+  &.medium
+    width: 1150px
+
+p, h1, h2, h3, h4, h5, h6
+  margin: 0
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600
+
+figure
+  margin: 0
+
+::-webkit-input-placeholder
+:-moz-placeholder
+::-moz-placeholder
+:-ms-input-placeholder
+  opacity: 1 !important
