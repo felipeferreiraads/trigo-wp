@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trigo e Farinhas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.min.css" />
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <div class="grid">
-                <a href="#" class="logo">
-                    <img src="assets/img/logo.svg" alt="Trigo e Farinhas">
-                </a>
-                <nav class="menu">
-                    <a href="#">Home</a>
-                    <a href="#">Empresa</a>
-                    <a href="#">Boletins</a>
-                    <a href="#">Cursos</a>
-                    <a href="#">Palestras</a>
-                    <a href="#">Notícias</a>
-                    <a href="#">Contato</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+<?php
+/*
+    Template Name: Boletim
+*/
+get_header(); ?>
 
     <section class="header-internal">
         <h1>Boletim Trigo</h1>
@@ -36,7 +11,7 @@
     <section class="content">
         <div class="container">
             <div class="icon-newsletter">
-                <img src="assets/img/icon-trigo.svg" alt="Boletim Trigo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-trigo.svg" alt="Boletim Trigo">
             </div>
             <div class="text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Massa tincidunt dui ut ornare lectus sit amet est placerat. Ac felis donec et odio pellentesque diam volutpat. Tincidunt eget nullam non nisi est. Eget mi proin sed libero enim sed faucibus turpis. Platea dictumst quisque sagittis purus sit amet volutpat. Auctor augue mauris augue neque.</p>
@@ -83,50 +58,4 @@
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Contato</h2>
-        <form action="#">
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="email" name="email" placeholder="E-mail" class="half">
-            <input type="email" name="assunto" placeholder="Assunto" class="half">
-            <textarea name="mensagem" placeholder="Digite sua mensagem"></textarea>
-            <div class="submit">
-                <button class="button">Enviar</button>
-            </div>
-        </form>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="grid">
-                <div class="logo">
-                    <img src="assets/img/logo-white.png" alt="Trigo e Farinhas">
-                </div>
-                <div class="menu">
-                    <nav>
-                        <h3>Empresa</h3>
-                        <a href="#">Sobre nós</a>
-                        <a href="#">Contato</a>
-                    </nav>
-                    <nav>
-                        <h3>Produtos</h3>
-                        <a href="#">Boletins</a>
-                        <a href="#">Cursos</a>
-                        <a href="#">Palestras</a>
-                    </nav>
-                    <nav>
-                        <h3>Notícias</h3>
-                        <a href="#">Blog</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="bottom">
-                <p>&copy; Copyright 2018 - Trigo e Farinhas | Todos os direitos reservados
-            </div>
-        </div>
-    </footer>
-    
-    <script src="assets/js/bundle.min.js"></script>
-</body>
-
-</html> 
+<?php get_footer(); ?>
