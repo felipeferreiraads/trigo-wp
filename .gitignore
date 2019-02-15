@@ -1,3 +1,4 @@
 node_modules
 wp-config.php
 .htaccess
+yarn.lock

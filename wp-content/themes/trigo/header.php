@@ -25,6 +25,9 @@
                     <a href="<?php echo site_url('/noticias/'); ?>">Notícias</a>
                     <a href="#contato">Contato</a>
                 </nav>
+                <a href="#" class="open-menu">
+                    <span class="icon-menu"></span>
+                </a>
             </div>
         </div>
     </header>

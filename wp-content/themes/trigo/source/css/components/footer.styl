@@ -1,25 +1,38 @@
 footer
     background-image: linear-gradient(296deg, #db6344, $color.primary)
     padding-top: 100px
+    +below($bp.lg)
+        padding: 0
     .container
         max-width: 1150px
     .grid
-        border-top: 1px solid white
         padding: 50px 10% 0 5%
         display: flex
         justify-content: space-between
+        +above($bp.lg)
+            border-top: 1px solid white
     .logo
         flex-basis: 20%
-        img 
+
+        +below($bp.lg)
+            display none
+        img
             max-width: 100%
     .menu
         flex-basis: 40%
         display flex
-        justify-content: space-between 
+        justify-content: space-between
+        +below($bp.lg)
+            flex-basis: 100%
+            flex-direction: column
+            > *:not(:last-child)
+                margin-bottom: 30px
         nav
             display flex
             flex-direction: column
             color white
+            +below($bp.lg)
+                align-items: center
         h3
             font-size: 20px
             margin-bottom: 25px

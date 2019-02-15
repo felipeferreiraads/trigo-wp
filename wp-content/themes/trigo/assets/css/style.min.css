@@ -447,7 +447,7 @@ p {
   margin-right: auto;
 }
 .container.medium {
-  width: 1150px;
+  max-width: 1150px;
 }
 p,
 h1,
@@ -512,65 +512,26 @@ figure {
   display: inline-block;
   animation: spin 2s infinite linear;
 }
-.icon-home:before {
-  content: "\e902";
+.icon-angle-right:before {
+  content: "\e905";
 }
-.icon-image:before {
-  content: "\e90d";
-}
-.icon-film:before {
-  content: "\e913";
-}
-.icon-location:before {
-  content: "\e948";
-}
-.icon-clock:before {
-  content: "\e94e";
-}
-.icon-spinner:before {
-  content: "\e97a";
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-checkmark:before {
-  content: "\ea10";
-}
-.icon-circle-up:before {
-  content: "\ea41";
-}
-.icon-circle-right:before {
-  content: "\ea42";
-}
-.icon-circle-down:before {
-  content: "\ea43";
-}
-.icon-circle-left:before {
-  content: "\ea44";
-}
-.icon-google-plus:before {
-  content: "\ea8b";
+.icon-angle-left:before {
+  content: "\e906";
 }
 .icon-facebook:before {
-  content: "\ea90";
+  content: "\e900";
 }
 .icon-instagram:before {
-  content: "\ea92";
-}
-.icon-whatsapp:before {
-  content: "\ea93";
+  content: "\e901";
 }
 .icon-twitter:before {
-  content: "\ea96";
+  content: "\e902";
 }
 .icon-youtube:before {
-  content: "\ea9d";
+  content: "\e903";
 }
-.icon-linkedin:before {
-  content: "\eaca";
+.icon-menu:before {
+  content: "\e904";
 }
 @-moz-keyframes spin {
   0% {
@@ -778,17 +739,31 @@ footer {
   background-image: linear-gradient(296deg, #db6344, #ef4b22);
   padding-top: 100px;
 }
+@media only screen and (max-width: 1024px) {
+  footer {
+    padding: 0;
+  }
+}
 footer .container {
   max-width: 1150px;
 }
 footer .grid {
-  border-top: 1px solid #fff;
   padding: 50px 10% 0 5%;
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (min-width: 1024px) {
+  footer .grid {
+    border-top: 1px solid #fff;
+  }
+}
 footer .logo {
   flex-basis: 20%;
+}
+@media only screen and (max-width: 1024px) {
+  footer .logo {
+    display: none;
+  }
 }
 footer .logo img {
   max-width: 100%;
@@ -798,10 +773,24 @@ footer .menu {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1024px) {
+  footer .menu {
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+  footer .menu > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 footer .menu nav {
   display: flex;
   flex-direction: column;
   color: #fff;
+}
+@media only screen and (max-width: 1024px) {
+  footer .menu nav {
+    align-items: center;
+  }
 }
 footer .menu h3 {
   font-size: 20px;
@@ -858,15 +847,31 @@ header .logo img {
   height: 100%;
 }
 header .menu {
-  flex-basis: 60%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 1024px) {
+  header .menu {
+    display: none;
+  }
 }
 header .menu a {
   font-size: 16px;
   color: #ef4b22;
   text-transform: uppercase;
   font-weight: 600;
+}
+header .menu a:not(:last-child) {
+  margin-right: 30px;
+}
+header .open-menu {
+  font-size: 25px;
+  color: #ef4b22;
+}
+@media only screen and (min-width: 1024px) {
+  header .open-menu {
+    display: none;
+  }
 }
 .banner {
   width: 150%;
@@ -910,13 +915,25 @@ header .menu a {
   color: #fff;
   margin-bottom: 50px;
 }
+@media only screen and (max-width: 1024px) {
+  .banner h1 {
+    font-size: 28px;
+  }
+}
 .banner p {
   color: #fff;
   margin-bottom: 50px;
-  max-width: 50%;
+  max-width: 640px;
 }
 .blog-home {
   padding: 100px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .blog-home {
+    position: relative;
+    top: -150px;
+    padding: 50px 0;
+  }
 }
 .blog-home h2 {
   font-size: 35px;
@@ -927,8 +944,18 @@ header .menu a {
 .blog-home .grid {
   display: flex;
 }
-.blog-home .grid > *:not(:last-child) {
-  margin-right: 70px;
+@media only screen and (min-width: 1024px) {
+  .blog-home .grid > *:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .blog-home .grid {
+    flex-wrap: wrap;
+  }
+  .blog-home .grid > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 .blog-home .grid-internal {
   display: flex;
@@ -945,6 +972,11 @@ header .menu a {
   margin: 100px auto 0;
   max-width: 200px;
   padding: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .blog-home .button {
+    margin: 50px auto 0;
+  }
 }
 .blog-home .filter {
   display: flex;
@@ -1018,11 +1050,21 @@ header .menu a {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 1024px) {
+  .contact {
+    top: -150px;
+  }
+}
 .contact h2 {
   font-size: 35px;
   color: #ef4b22;
   text-align: center;
   margin-bottom: 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .contact h2 {
+    margin-bottom: 50px;
+  }
 }
 .contact::after {
   width: 300%;
@@ -1081,6 +1123,12 @@ header .menu a {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 1024px) {
+  .section-home {
+    position: relative;
+    top: -150px;
+  }
+}
 .section-home .grid {
   min-height: 550px;
   display: flex;
@@ -1091,6 +1139,11 @@ header .menu a {
 .section-home .image {
   flex-basis: 40%;
   overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .section-home .image {
+    display: none;
+  }
 }
 .section-home .image img {
   width: 100%;
@@ -1107,6 +1160,11 @@ header .menu a {
   align-items: center;
   background: #fff;
 }
+@media only screen and (max-width: 1024px) {
+  .section-home .text-section {
+    padding: 50px 20px;
+  }
+}
 .section-home .text-section.gradient {
   background-image: linear-gradient(296deg, #db6344, #ef4b22);
 }
@@ -1119,9 +1177,20 @@ header .menu a {
   text-align: center;
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 1024px) {
+  .section-home .text-section h2 {
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+}
 .section-home .text-section p {
   text-align: center;
   margin-bottom: 80px;
+}
+@media only screen and (max-width: 1024px) {
+  .section-home .text-section p {
+    margin-bottom: 50px;
+  }
 }
 .button {
   padding: 0 45px;
@@ -1155,11 +1224,27 @@ header .menu a {
   text-align: center;
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 1024px) {
+  .newsletters h2 {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+}
 .newsletters .grid {
   display: flex;
 }
-.newsletters .grid > *:not(:last-child) {
-  margin-right: 70px;
+@media only screen and (max-width: 1024px) {
+  .newsletters .grid {
+    flex-wrap: wrap;
+  }
+  .newsletters .grid > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .newsletters .grid > *:not(:last-child) {
+    margin-right: 70px;
+  }
 }
 .card-newsletter {
   height: 400px;
@@ -1168,6 +1253,7 @@ header .menu a {
   box-shadow: 0 2px 10px 0 rgba(162,162,162,0.5);
   position: relative;
   overflow: hidden;
+  padding: 0 15px;
 }
 .card-newsletter.internal {
   height: 350px;
