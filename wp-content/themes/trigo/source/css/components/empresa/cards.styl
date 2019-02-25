@@ -2,10 +2,17 @@
     display flex
     justify-content space-between
     margin-top: 100px
-    > *:not(:last-child)
-        margin-right: 90px
+    +above($bp.lg)
+        > *:not(:last-child)
+            margin-right: 90px
+    +below($bp.lg)
+        flex-wrap: wrap
 
 .card-enterprise
+    +below($bp.lg)
+        width: 100%
+        &:nth-child(n+2)
+            margin-top: 30px
     figure
         display: flex
         justify-content: center

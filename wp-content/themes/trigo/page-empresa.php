@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
     <section class="header-internal">
         <h1>Empresa</h1>
@@ -9,11 +9,10 @@
             <h2>Sobre nós</h2>
             <div class="enterprise">
                 <div class="left">
-                    <p>Lorem ipsum dolor sit amet, an usu etiam dissentiet, purto reprehendunt signiferumque cu per. An inermis voluptaria vel, ea nec veri aliquip adversarium. Te mei lucilius elaboraret instructior, altera platonem scriptorem mel et. Sea no utamur inimicus. Dico prompta eum an, qui et aliquip scripserit scriptorem, ut sed tempor blandit. Eu mea sint dicam vivendo. Et est sumo erroribus posidonium.</p>
-                    <p>Lorem ipsum dolor sit amet, an usu etiam dissentiet, purto reprehendunt signiferumque cu per. An inermis voluptaria vel, ea nec veri aliquip adversarium. Te mei lucilius elaboraret instructior, altera platonem scriptorem mel et. Sea no utamur inimicus.</p>
+                    <?php the_content(); ?>
                 </div>
                 <figure>
-                    <img src="http://placehold.it/300x200" alt="Empresa">
+                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="Empresa">
                 </figure>
             </div>
 
@@ -23,21 +22,21 @@
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/icon-trigo.svg" alt="Missão">
                     </figure>
                     <h3>Missão</h3>
-                    <p>Lorem ipsum dolor sit amet, an usu etiam dissentiet, purto reprehendunt signiferumque cu per. An inermis voluptaria vel, ea nec veri aliquip adversarium. Te mei lucilius elaboraret instructior, altera platonem scriptorem mel et. Sea no utamur inimicus. </p>
+                    <p><?php the_field('missao'); ?></p>
                 </div>
                 <div class="card-enterprise">
                     <figure>
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/icon-trigo.svg" alt="Missão">
                     </figure>
                     <h3>Visão</h3>
-                    <p>Lorem ipsum dolor sit amet, an usu etiam dissentiet, purto reprehendunt signiferumque cu per. An inermis voluptaria vel, ea nec veri aliquip adversarium. Te mei lucilius elaboraret instructior, altera platonem scriptorem mel et. Sea no utamur inimicus. </p>
+                    <p><?php the_field('visao'); ?></p>
                 </div>
                 <div class="card-enterprise">
                     <figure>
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/icon-trigo.svg" alt="Missão">
                     </figure>
-                    <h3>Valoress</h3>
-                    <p>Lorem ipsum dolor sit amet, an usu etiam dissentiet, purto reprehendunt signiferumque cu per. An inermis voluptaria vel, ea nec veri aliquip adversarium. Te mei lucilius elaboraret instructior, altera platonem scriptorem mel et. Sea no utamur inimicus. </p>
+                    <h3>Valores</h3>
+                    <p><?php the_field('valores'); ?></p>
                 </div>
             </div>
         </div>

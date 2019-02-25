@@ -1,4 +1,4 @@
-    <section class="contact" id="contato">
+    <section class="contact <?php echo !is_home() ? 'internal' : '';?>" id="contato">
         <h2>Contato</h2>
         <form action="#">
             <input type="text" name="nome" placeholder="Nome">

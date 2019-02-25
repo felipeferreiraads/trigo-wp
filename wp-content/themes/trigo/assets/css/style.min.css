@@ -684,13 +684,80 @@ figure {
 .slider.round::before {
   border-radius: 50%;
 }
+.course-lecture {
+  padding: 100px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .course-lecture {
+    padding: 50px 0;
+  }
+}
+.course-lecture .grid {
+  display: flex;
+  flex-direction: column;
+}
+.course-lecture .grid .text {
+  margin-left: 0;
+}
+.course-lecture .grid .text:not(:first-child) {
+  margin-top: 50px;
+}
+.course-lecture .grid .text:last-child {
+  margin-bottom: 100px;
+}
+.course-lecture h2 {
+  font-size: 35px;
+  color: #ef4b22;
+  margin-bottom: 20px;
+}
+.course-lecture .button {
+  margin: 0 auto;
+}
+.course-lecture .speaker {
+  display: flex;
+  margin-top: 50px;
+}
+.course-lecture .speaker figure {
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.course-lecture .speaker figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.course-lecture .speaker .speaker-text {
+  flex-basis: 800px;
+  padding-left: 50px;
+}
+.course-lecture .speaker .speaker-text p {
+  line-height: 1.8;
+}
 .cards-enterprise {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
 }
-.cards-enterprise > *:not(:last-child) {
-  margin-right: 90px;
+@media only screen and (min-width: 1024px) {
+  .cards-enterprise > *:not(:last-child) {
+    margin-right: 90px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cards-enterprise {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .card-enterprise {
+    width: 100%;
+  }
+  .card-enterprise:nth-child(n+2) {
+    margin-top: 30px;
+  }
 }
 .card-enterprise figure {
   display: flex;
@@ -724,10 +791,18 @@ figure {
 .enterprise .left p:not(:last-child) {
   margin-bottom: 20px;
 }
-.enterprise figure {
-  width: 300px;
-  height: 200px;
-  margin-left: 70px;
+@media only screen and (min-width: 800px) {
+  .enterprise figure {
+    width: 300px;
+    margin-left: 70px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .enterprise figure {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 .enterprise figure img {
   width: 100%;
@@ -1051,7 +1126,7 @@ header .open-menu {
   overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
-  .contact {
+  .contact:not(.internal) {
     top: -150px;
   }
 }

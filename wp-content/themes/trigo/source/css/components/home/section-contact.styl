@@ -1,8 +1,9 @@
 .contact
     position relative
     overflow hidden
-    +below($bp.lg)
-        top: -150px
+    &:not(.internal)
+        +below($bp.lg)
+            top: -150px
     h2
         font-size: 35px
         color: $color.primary
